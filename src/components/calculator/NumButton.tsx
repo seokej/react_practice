@@ -13,7 +13,7 @@ const NumButton = (props: NumButtonProps) => {
             return;
         }
 
-        calcDispatch({ type: '', payload: n });
+        calcDispatch({ type: 'INPUT', payload: n });
     };
 
     return (

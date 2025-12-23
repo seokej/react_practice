@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useReducer } from 'react';
 import { calcFunc } from '../../reducer/counterReducer';
 import CalcNum from './CalcNum';
 import CalcResetButton from './CalcResetButton';
