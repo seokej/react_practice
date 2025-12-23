@@ -4,7 +4,7 @@ import Calc from './components/calculator/Calc';
 import Calc_custom from './components/calculator/Calc_custom';
 
 function App() {
-    const custom = false; // true: custom calc, false: original calc
+    const custom = true; // true: custom calc, false: original calc
 
     return (
         <>

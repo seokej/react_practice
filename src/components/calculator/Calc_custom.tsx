@@ -7,10 +7,12 @@ import CalcNum_custom from './CalcNum_custom';
 import NumButton_custom from './NumButton_custom';
 
 function App() {
+    // 계산기에 보여지는 숫자 상태 관리
     const [displayNum, setDisplayNum] = useState('0');
+    // 이전에 계산된 숫자 상태 관리
     const [prevNum, setPrevNum] = useState('0');
+    // 계산기 내부 로직 상태 관리
     const [calcNum, calcDispatch] = useReducer(calcFunc_custom, '0');
-    // const [calcState, calcDispatch] = useReducer(calcFunc, { current: '0', previous: null, operator: null, overwrite: false });
 
     const calcReset = () => {
       calcDispatch({ type: 'reset' });
