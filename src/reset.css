@@ -1,0 +1,46 @@
+/* input 기본 스타일 초기화 */
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+	display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit; /* Inherit font color from parent */
+  font: inherit; /* Inherit font styles from parent */
+  line-height: normal; /* Normalizes line-height in Firefox */
+  -webkit-appearance: none; /* Corrects styling for clickable inputs in iOS/Webkit */
+  appearance: none; /* Vendor-prefix free version */
+  cursor: pointer;
+}
+
+a {
+  color: #fff; 
+  text-decoration: none; 
+  outline: none
+}
+
+a:hover, a:active {
+  text-decoration: none; 
+  color:#fff; 
+  background-color:inherit;
+}
