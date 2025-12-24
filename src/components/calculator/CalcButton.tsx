@@ -2,12 +2,11 @@ import React from 'react';
 
 export interface CalcButtonProps {
     calcType: string;
-    calcRunCheck: boolean;
     calcDispatch: React.Dispatch<any>;
 }
 
 const CalcButton = (props: CalcButtonProps) => {
-    const { calcType, calcRunCheck, calcDispatch } = props;
+    const { calcType, calcDispatch } = props;
 
     const mapTypeToSymbol = (type: string) => {
         switch (type) {
@@ -20,7 +19,7 @@ const CalcButton = (props: CalcButtonProps) => {
     }
 
     const calcTypeHandler = () => {
-        if (calcRunCheck) {
+        if (calcType === 'calc') {
             calcDispatch({ type: 'EVALUATE' });
             return;
         }
@@ -31,8 +30,8 @@ const CalcButton = (props: CalcButtonProps) => {
     return (
         <>
             {
-                calcRunCheck ? 
-                    <button className='calc-button run-btn' onClick={calcTypeHandler}>=</button> 
+                calcType === 'calc' ? 
+                    <button className='calc-button calc-btn' onClick={calcTypeHandler}>=</button> 
                 : 
                 (
                     <button className={'calc-button ' + calcType} onClick={calcTypeHandler}>

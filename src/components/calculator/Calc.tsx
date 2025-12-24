@@ -5,6 +5,7 @@ import CalcResetButton from './CalcResetButton';
 import CalcDeleteButton from './CalcDeleteButton';
 import CalcButton from './CalcButton';
 import NumButton from './NumButton';
+import { CalcStyled } from './styled/CalcStyled';
 
 function Calc() {
     const [calcState, calcDispatch] = useReducer(calcFunc, { current: '0', previous: null, operator: null, overwrite: false });
@@ -18,15 +19,15 @@ function Calc() {
     }
 
     return (
-        <div className="calc-wrap">
+        <CalcStyled className="calc-wrap">
             <CalcNum value={calcState.current} />
 
             <div className="calc-top-button-wrap">
               {/* 연산자, 리셋, 딜리트 */}
                 <CalcResetButton calcReset={calcReset} />
                 <CalcDeleteButton calcDelete={calcDelete}/>
-                <CalcButton calcType={'divide'} calcRunCheck={false} calcDispatch={calcDispatch} />
-                <CalcButton calcType={'multiply'} calcRunCheck={false} calcDispatch={calcDispatch} />
+                <CalcButton calcType={'divide'} calcDispatch={calcDispatch} />
+                <CalcButton calcType={'multiply'} calcDispatch={calcDispatch} />
             </div>
 
             <div className="calc-num-wrap">
@@ -35,12 +36,12 @@ function Calc() {
 
               {/* 사칙연산 한 칸씩 */}
               <div className='calc-bottom-buttom-wrap'>
-                <CalcButton calcType={'decrease'} calcRunCheck={false} calcDispatch={calcDispatch} />
-                <CalcButton calcType={'increase'} calcRunCheck={false} calcDispatch={calcDispatch} />
-                <CalcButton calcType={'calc'} calcRunCheck={true} calcDispatch={calcDispatch} />
+                <CalcButton calcType={'decrease'} calcDispatch={calcDispatch} />
+                <CalcButton calcType={'increase'} calcDispatch={calcDispatch} />
+                <CalcButton calcType={'calc'} calcDispatch={calcDispatch} />
               </div>
             </div>
-        </div>
+        </CalcStyled>
     ) 
 }
 

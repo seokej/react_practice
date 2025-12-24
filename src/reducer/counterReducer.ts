@@ -19,10 +19,8 @@ const evaluate = (a: string, operator: string, b: string) => {
     switch (operator) {
         case '+': return (x + y).toString();
         case '-': return (x - y).toString();
-        case '×':
-        case '*': return (x * y).toString();
-        case '÷':
-        case '/': return y === 0 ? 'Error' : (x / y).toString();
+        case '×': return (x * y).toString();
+        case '÷': return y === 0 ? 'Error' : (x / y).toString();
         default: return '0';
     }
 }
