@@ -9,8 +9,8 @@ export const CalcStyled = styled.div`
     margin: 0 auto;
     font-family: 'poppins', sans-serif;
     font-weight: 500;
-    letter-spacing: 0;
     font-size: 16px;
+    letter-spacing: 0;
     box-sizing: border-box;
     border-radius: 16px;
     background-color: #F7F8FB;
