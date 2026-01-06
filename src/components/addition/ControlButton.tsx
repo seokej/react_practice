@@ -8,10 +8,10 @@ export interface ControlButtonProps {
 }
 
 const ControlButton = (props: ControlButtonProps) => {
-  const { text, onClick } = props;
+  const { text, className, onClick } = props;
 
   return (
-    <button className='sum-btn' onClick={onClick}>{text}</button>
+    <button className={className} onClick={onClick}>{text}</button>
   )
 }
 
