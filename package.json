@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "@vanilla-extract/css": "^1.18.0",
+    "lucide-react": "^0.536.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "styled-components": "^6.1.19",
-    "lucide-react": "^0.536.0",
-    "@tailwindcss/vite": "^4.1.11",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
+    "@vanilla-extract/vite-plugin": "^5.1.4",
     "@vitejs/plugin-react": "^5.1.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
